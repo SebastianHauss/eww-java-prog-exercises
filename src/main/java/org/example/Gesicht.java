@@ -2,20 +2,16 @@ package org.example;
 
 public class Gesicht {
     public static void main(String[] args) {
-        String number = "0123456789012345";
-        System.out.println(number);
-        for (int i = 0; i < number.length(); i++) {
-            System.out.print("-");
-        }
-        System.out.println();
+        // nicht sicher ob das ganz richtig ist!
+        System.out.println("0123456789012345");
+        System.out.println("________________");
         System.out.println("\\              /");
         System.out.println(" \\  \"\"\"  \"\"\"  /");
         System.out.println("  \\  o    o  /");
-        System.out.println("   \\   --   /");
+        System.out.println("   \\   __   /");
         System.out.println("    \\      /");
         System.out.println("     \\====/");
         System.out.println("      \\==/");
         System.out.println("       \\/");
-
     }
 }
