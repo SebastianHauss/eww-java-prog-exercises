@@ -1,4 +1,4 @@
-package fhtw.javaExercises;
+package fhtw.javaExercises.lesson2;
 
 import java.util.Scanner;
 

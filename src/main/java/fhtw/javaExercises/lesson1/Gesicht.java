@@ -1,4 +1,4 @@
-package fhtw.javaExercises;
+package fhtw.javaExercises.lesson1;
 
 public class Gesicht {
     public static void main(String[] args) {
