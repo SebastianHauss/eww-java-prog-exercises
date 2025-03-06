@@ -1,4 +1,4 @@
-package fhtw.java;
+package fhtw.javaExercises;
 
 public class NeighborOfTheBeast {
     public static void main(String[] args) {
