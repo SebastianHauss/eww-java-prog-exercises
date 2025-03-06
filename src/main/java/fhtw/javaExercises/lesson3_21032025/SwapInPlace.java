@@ -1,7 +1,5 @@
 package fhtw.javaExercises.lesson3_21032025;
 
-import fhtw.javaExercises.lesson1_04032025.EscapeCharacters;
-
 import java.util.Scanner;
 
 public class SwapInPlace {
