@@ -1,4 +1,4 @@
-package org.example;
+package fhtw.java.lesson1;
 
 public class TheLifeOfPi {
     public static void main(String[] args) {

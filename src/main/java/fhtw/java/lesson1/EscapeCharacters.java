@@ -1,4 +1,4 @@
-package org.example;
+package fhtw.java.lesson1;
 
 public class EscapeCharacters {
     public static void main(String[] args) {
