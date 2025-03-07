@@ -9,7 +9,7 @@ public class Cube {
         System.out.print("Length of a side: >");
 
         int length = scanner.nextInt();
-        double surfaceArea = (length * length) * 6;
+        double surfaceArea = length * length * 6;
         System.out.printf("Surface area: %.2f\n", surfaceArea);
 
         double cubeVolume = length * length * length;
