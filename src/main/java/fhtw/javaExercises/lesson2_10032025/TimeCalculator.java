@@ -22,19 +22,18 @@ public class TimeCalculator {
 
         long ms = milliseconds % 1000;
 
-        System.out.printf("%s %d", "days", days);
+        System.out.printf("%7s %d", "days", days);
         System.out.println();
 
-        System.out.printf("%s %d", "hours", hours);
+        System.out.printf("%7s %d", "hours", hours);
         System.out.println();
 
-        System.out.printf("%s %d", "minutes", minutes);
+        System.out.printf("%7s %d", "minutes", minutes);
         System.out.println();
 
-        System.out.printf("%s %d", "seconds", seconds);
+        System.out.printf("%7s %d", "seconds", seconds);
         System.out.println();
 
-        System.out.printf("%s %d", "ms", ms);
-
+        System.out.printf("%7s %d", "ms", ms);
     }
 }
