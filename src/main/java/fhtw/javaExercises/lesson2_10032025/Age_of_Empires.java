@@ -23,5 +23,4 @@ public class Age_of_Empires {
 
         System.out.printf("%s: %2s" + "%#x" + "%s", "%#x", "~", age, "~\n");
     }
-
 }
