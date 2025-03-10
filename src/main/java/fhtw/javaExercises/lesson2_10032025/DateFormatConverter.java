@@ -32,7 +32,7 @@ public class DateFormatConverter {
             System.out.println("invalid date");
             return;
         }
-        
+
         System.out.printf("%02d.%02d.%d", day, month, year);
 
         sc.close();

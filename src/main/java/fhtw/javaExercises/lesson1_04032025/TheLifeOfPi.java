@@ -1,5 +1,7 @@
 package fhtw.javaExercises.lesson1_04032025;
 
+import java.util.Locale;
+
 public class TheLifeOfPi {
     public static void main(String[] args) {
         double pi = 3.14159265359;
