@@ -21,5 +21,7 @@ public class Oktal {
         int einerDez = numDez % 10;
 
         System.out.printf("Ziffernsumme: %d", hunderter + zehner + einerDez);
+
+
     }
 }
