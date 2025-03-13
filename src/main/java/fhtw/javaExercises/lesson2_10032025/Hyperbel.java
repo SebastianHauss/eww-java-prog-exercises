@@ -21,8 +21,14 @@ public class Hyperbel {
         System.out.print("e: ");
         double e = sc.nextDouble();
 
+        System.out.println();
         System.out.println("01234567890123456");
         System.out.println("\\               /");
-        System.out.print("\\ ");
+        System.out.printf(" \\  %010d /\n", a);
+        System.out.println("  \\           /");
+        System.out.printf("%d  | %06.3f |  %d\n", b, e, c);
+        System.out.println("  /          \\");
+        System.out.printf(" / %010d \\\n", d);
+        System.out.println("/              \\");
     }
 }
