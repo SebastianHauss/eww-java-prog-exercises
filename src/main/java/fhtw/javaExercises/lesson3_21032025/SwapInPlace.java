@@ -6,7 +6,7 @@ public class SwapInPlace {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Please give 2 numbers:");
+        System.out.print("Please give 2 numbers:");
         String num = sc.nextLine();
 
         String[] numbers = num.split(" ");
@@ -17,9 +17,12 @@ public class SwapInPlace {
         System.out.println("a = " + num1);
         System.out.println("b: " + num2);
 
+        num1 = Integer.parseInt(numbers[1]);
+        num2 = Integer.parseInt(numbers[0]);
+
         System.out.println("After:");
-        System.out.println("a = " + num2);
-        System.out.println("b: " + num1);
+        System.out.printf(" a= %d\n", num1);
+        System.out.printf(" b: %d", num2);
 
         sc.close();
     }
