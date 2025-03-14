@@ -6,23 +6,21 @@ public class SwapInPlace {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Please give 2 numbers:");
-        String num = sc.nextLine();
+        System.out.println("Please give 2 numbers: ");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
 
-        String[] numbers = num.split(" ");
-        int num1 = Integer.parseInt(numbers[0]);
-        int num2 = Integer.parseInt(numbers[1]);
-
-        System.out.println("Before:");
+        System.out.println("Before: ");
         System.out.println("a = " + num1);
-        System.out.println("b: " + num2);
+        System.out.println("b = " + num2);
 
-        num1 = Integer.parseInt(numbers[1]);
-        num2 = Integer.parseInt(numbers[0]);
+        num1 = num1 + num2;
+        num2 = num1 - num2;
+        num1 = num1 - num2;
 
-        System.out.println("After:");
-        System.out.printf(" a= %d\n", num1);
-        System.out.printf(" b: %d", num2);
+        System.out.println("After: ");
+        System.out.println("a = " + num1);
+        System.out.println("b = " + num2);
 
         sc.close();
     }
