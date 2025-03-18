@@ -12,26 +12,26 @@ public class Classifier {
         System.out.print("enter quality: ");
         int quality = sc.nextInt();
 
-        if (isHighPrice(price)) {
-            System.out.println("high price");
-        } else {
-            System.out.println("low price");
-        }
-        if (isHighQuality(quality)) {
-            System.out.println("high quality");
-        } else {
-            System.out.println("low quality");
-        }
+        boolean highPrice = isHighPrice(price);
+        boolean highQuality = isHighQuality(quality);
 
-        if (isJunk(quality, price)) {
+        System.out.println(highPrice ? "high price" : "low price");
+        System.out.println(highQuality ? "high quality" : "low quality");
+
+        if (!highQuality && !highPrice) {
             System.out.println("junk");
-        } else if (isRipOff(quality, price)) {
+        }
+        if (!highQuality && highPrice) {
             System.out.println("rip off");
-        } else if (isBargain(quality, price)) {
+        }
+        if (highQuality && !highPrice) {
             System.out.println("bargain");
-        } else if (isLuxury(quality, price)) {
+        }
+        if (highQuality && highPrice) {
             System.out.println("luxury");
         }
+
+        sc.close();
     }
 
     public static boolean isHighPrice(int price) {
