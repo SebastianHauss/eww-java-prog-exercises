@@ -9,8 +9,10 @@ public class Age_of_Empires {
         System.out.print("Your age: ");
         int age = sc.nextInt();
 
+        // %s: -> %d: , %2s -> ~ , %d -> age ,  ~
         System.out.printf("%s: %2s" + "%d" + "%s", "%d", "~", age, "~\n");
 
+        //%s: -> %+d: , %1s -> ~ , %+d -> +age , ~
         System.out.printf("%s: %1s" + "%+d" + "%s", "%+d", "~", age, "~\n");
 
         System.out.printf("%s: %2s" + "%d" + "%s", "% d", "~ ", age, "~\n");
