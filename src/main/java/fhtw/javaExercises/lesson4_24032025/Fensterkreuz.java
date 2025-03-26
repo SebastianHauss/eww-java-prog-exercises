@@ -15,7 +15,6 @@ public class Fensterkreuz {
         int vertikal = getVertikal(sc, hoehe);
 
         draw(breite, hoehe, horizontal, vertikal);
-
     }
 
     public static int getWidth(Scanner sc) {
@@ -60,6 +59,7 @@ public class Fensterkreuz {
         for (int row = 0; row < hoehe; row++) {
 
             for (int col = 0; col < breite; col++) {
+
                 if (row == vertikal - 1 && col == horizontal - 1) {
                     System.out.print("+");
                 } else if (row == vertikal - 1) {
