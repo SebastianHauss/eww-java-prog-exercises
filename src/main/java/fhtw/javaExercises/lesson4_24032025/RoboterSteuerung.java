@@ -36,6 +36,7 @@ public class RoboterSteuerung {
                         break;
                     }
                     System.out.println("Abstand hinten: " + spaceBack);
+                    break;
                 case 3:
                     System.out.print("1: ");
                     float x_g = sc.nextFloat();
