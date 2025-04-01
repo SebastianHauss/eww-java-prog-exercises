@@ -209,4 +209,19 @@ public class Calendars {
         System.out.println(year);
     }
 
+    public static void printStatistics(int year, int month, int day) {
+        System.out.println("Statistics for");
+        printDate(year, month, day);
+        if (isLeap(year)) {
+            System.out.printf("%d is a leap year", year);
+        } else {
+            System.out.printf("%d is not a leap year", year);
+        }
+
+        printMonthName(month); System.out.printf(" %d has %d days", year, daysInMonth(year, month));
+
+        System.out.printf("it is day %d of %d", dayNumber(year, month, day), year);
+
+        System.out.printf("it is in week %d", weekNumber(year, month, day));
+    }
 }
