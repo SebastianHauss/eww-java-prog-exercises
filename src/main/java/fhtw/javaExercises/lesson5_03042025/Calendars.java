@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Calendars {
     public static void main(String[] args) {
-        printDate(2000, 1, 1);
+        printStatistics(2000, 1, 1);
     }
 
     public static boolean isLeap(int year) {
@@ -213,14 +213,15 @@ public class Calendars {
         System.out.println("Statistics for");
         printDate(year, month, day);
         if (isLeap(year)) {
-            System.out.printf("%d is a leap year", year);
+            System.out.printf("%d is a leap year\n", year);
         } else {
-            System.out.printf("%d is not a leap year", year);
+            System.out.printf("%d is not a leap year\n", year);
         }
 
-        printMonthName(month); System.out.printf(" %d has %d days", year, daysInMonth(year, month));
+        printMonthName(month);
+        System.out.printf(" %d has %d days\n", year, daysInMonth(year, month));
 
-        System.out.printf("it is day %d of %d", dayNumber(year, month, day), year);
+        System.out.printf("it is day %d of %d\n", dayNumber(year, month, day), year);
 
         System.out.printf("it is in week %d", weekNumber(year, month, day));
     }
