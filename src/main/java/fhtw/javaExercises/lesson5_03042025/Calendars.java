@@ -35,7 +35,7 @@ public class Calendars {
     public static void main(String[] args) {
         sc = new Scanner(System.in);
 
-        int day = 1, month = 1, year = 1970;
+        int day = 25, month = 3, year = 2025;
         while (true) {
 
             int op;
@@ -358,7 +358,6 @@ public class Calendars {
         }
         System.out.println();
     }
-
 
     public static void printPadding(int year, int month, int day) {
         for (int i = 0; i < ymd2w(year, month, day); i++) {
