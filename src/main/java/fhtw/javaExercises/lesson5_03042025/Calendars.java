@@ -2,11 +2,10 @@ package fhtw.javaExercises.lesson5_03042025;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Calendars {
     public static void main(String[] args) {
-        printStatistics(2000, 1, 1);
+        printCalendar(2000, 1, 1, 7);
     }
 
     public static boolean isLeap(int year) {
@@ -210,6 +209,11 @@ public class Calendars {
     }
 
     public static void printStatistics(int year, int month, int day) {
+        if (!checkDate(year, month, day)) {
+            System.out.println("invalid date");
+            return;
+        }
+
         System.out.println("Statistics for");
         printDate(year, month, day);
         if (isLeap(year)) {
@@ -224,5 +228,35 @@ public class Calendars {
         System.out.printf("it is day %d of %d\n", dayNumber(year, month, day), year);
 
         System.out.printf("it is in week %d", weekNumber(year, month, day));
+    }
+
+    public static void printCalendar(int year, int month, int day, int highlight) {
+        printMonthName(month);
+        System.out.println(" " + year);
+        String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+
+        printPadding(year, month, day);
+
+        for (int i = 1; i <= daysInMonth(year, month); i++) {
+            if (i == highlight) {
+                if (i > 10) {
+                    System.out.printf("<%d>", i);
+                } else if (i < 10) {
+                    System.out.printf(" <%d>", i);
+                }
+            } else {
+                System.out.printf("%3d ", i);
+            }
+
+            if (ymd2w(year, month, i) == 6) {
+                System.out.println();
+            }
+        }
+    }
+
+    public static void printPadding(int year, int month, int day) {
+        for (int i = 0; i < ymd2w(year, month, day); i++) {
+            System.out.print("    ");
+        }
     }
 }
