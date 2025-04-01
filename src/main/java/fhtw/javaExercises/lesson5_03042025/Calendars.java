@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Calendars {
     public static void main(String[] args) {
-        printNmberEnding(13);
+        printDate(2000, 1, 1);
     }
 
     public static boolean isLeap(int year) {
@@ -70,7 +70,7 @@ public class Calendars {
         if (checkDate(year, month, day)) {
             LocalDate date = LocalDate.of(year, month, day);
             DayOfWeek dayOfWeek = date.getDayOfWeek();
-            return dayOfWeek.getValue(); // Monday == 1, Sunday == 7
+            return dayOfWeek.getValue() - 1; // Monday == 0, Sunday == 6
         }
         return -1;
     }
@@ -194,12 +194,19 @@ public class Calendars {
     }
 
     public static void printDate(int year, int month, int day) {
-        printDayName(day);
+        if (!checkDate(year, month, day)) {
+            System.out.printf("invalid date (%d.%d.%d)", day, month, year);
+            return;
+        }
+
+        printDayName(ymd2w(year, month, day));
         System.out.print(", ");
         printMonthName(month);
         System.out.print(" ");
-        
+        System.out.print(day);
+        printNmberEnding(day);
+        System.out.print(" ");
+        System.out.println(year);
     }
-
 
 }
