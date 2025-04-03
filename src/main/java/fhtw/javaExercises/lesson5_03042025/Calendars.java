@@ -157,16 +157,16 @@ public class Calendars {
     public static boolean checkDate(int year, int month, int day) {
         if (checkDate(year, month)) {
 
-                if (year >= 1583 && year <= 2199) {
-                    return day >= 1 && day <= daysInMonth(year, month);
-                }
+            if (year >= 1583 && year <= 2199) {
+                return day >= 1 && day <= daysInMonth(year, month);
+            }
 
-                if (year == 1582) {
-                    if (month == 10) {
-                        return day >= 16 && day <= daysInMonth(year, month);
-                    }
+            if (year == 1582) {
+                if (month == 10) {
+                    return day >= 16 && day <= daysInMonth(year, month);
                 }
             }
+        }
         return false;
     }
 
