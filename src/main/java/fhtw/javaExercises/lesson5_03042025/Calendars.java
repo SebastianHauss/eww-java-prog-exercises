@@ -35,7 +35,7 @@ public class Calendars {
     public static void main(String[] args) {
         sc = new Scanner(System.in);
 
-        int day = 25, month = 3, year = 2025;
+        int day = 5, month = 1, year = 2025;
         while (true) {
 
             int op;
