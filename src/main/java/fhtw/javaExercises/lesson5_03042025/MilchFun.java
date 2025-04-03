@@ -17,7 +17,7 @@ public class MilchFun {
     }
 
     static int klasse(double fett, int haltbar) {
-        if (fett < 0 || haltbar > 1) {
+        if (fett < 0 || fett > 100 || haltbar > 1) {
             return -1;
         }
         if (fett > 7 && haltbar == 0) {
