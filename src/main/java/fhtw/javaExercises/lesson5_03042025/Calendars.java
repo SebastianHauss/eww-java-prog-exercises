@@ -35,7 +35,12 @@ public class Calendars {
     public static void main(String[] args) {
         sc = new Scanner(System.in);
 
-        int day = 5, month = 1, year = 2025;
+        int day = sc.nextInt();
+        int month = sc.nextInt();
+        int year = sc.nextInt();
+
+        System.out.println(checkDate(year, month, day));
+
         while (true) {
 
             int op;
@@ -135,14 +140,15 @@ public class Calendars {
     }
 
     public static boolean checkDate(int year, int month) {
-        if (checkDate(year)) {
+        if (!checkDate(year)) return false;
 
-            if (year == 1582) {
-                return month >= 10 && month <= 12;
-            }
-            if (year == 2199) {
-                return month >= 1 && month <= 12;
-            }
+        if (year > 1582 && year < 2199) {
+            return month >= 1 && month <= 12;
+        }
+        if (year == 1582) {
+            return month >= 10 && month <= 12;
+        }
+        if (year == 2199) {
             return month >= 1 && month <= 12;
         }
         return false;
@@ -151,18 +157,16 @@ public class Calendars {
     public static boolean checkDate(int year, int month, int day) {
         if (checkDate(year, month)) {
 
-            if (year == 1582) {
-                if (month == 10) {
-                    return day >= 16 && day <= daysInMonth(year, month);
+                if (year >= 1583 && year <= 2199) {
+                    return day >= 1 && day <= daysInMonth(year, month);
+                }
+
+                if (year == 1582) {
+                    if (month == 10) {
+                        return day >= 16 && day <= daysInMonth(year, month);
+                    }
                 }
             }
-            if (year == 2199) {
-                if (month == 12) {
-                    return day >= 1 && day <= 31;
-                }
-            }
-            return day >= 1 && day <= daysInMonth(year, month);
-        }
         return false;
     }
 
